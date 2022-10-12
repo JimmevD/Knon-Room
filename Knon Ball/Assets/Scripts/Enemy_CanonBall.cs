@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyCanonBall : Enemy
+public class Enemy_CanonBall : Enemy
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {

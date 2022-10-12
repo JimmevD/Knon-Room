@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class Player_Movment : MonoBehaviour
+public class Player_Movement : MonoBehaviour
 {
     public float movementSpeed = 4f;
-    private float speedLimiter = 0.7f;
+    [HideInInspector] public float speedLimiter = 0.7f;
     private Rigidbody2D rb;
 
     private Vector2 mousePos;

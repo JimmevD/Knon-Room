@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ExplosionEnemy : Enemy
+public class Explosion_Enemy : Enemy
 {
     private Transform player;
     [SerializeField] float speed = 2f;

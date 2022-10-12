@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player_Health : MonoBehaviour
@@ -7,6 +5,7 @@ public class Player_Health : MonoBehaviour
     private int health = 3;
     SpriteRenderer sp, spChild;
     [SerializeField] private Color[] healthColor;
+   
     void Start()
     {
         sp = GetComponent<SpriteRenderer>();
@@ -20,7 +19,7 @@ public class Player_Health : MonoBehaviour
             print("test");
         }
 
-            if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy")
         {
             collision.gameObject.GetComponent<Enemy>().TakeDamage(1);
             print("Gothit");

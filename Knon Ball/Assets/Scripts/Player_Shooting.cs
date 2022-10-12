@@ -7,14 +7,20 @@ public class Player_Shooting : MonoBehaviour
 
     [SerializeField] private float speed = 20f;
 
+    private float cooldown, waitTime = 0.5f;
+
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Time.time > cooldown)
         {
-            Shoot();
-        }
-    }
-
+            if (Input.GetMouseButtonDown(0))
+            {
+                Shoot();
+                cooldown = Time.time + waitTime;
+            }
+        }      
+    } 
+    
     private void Shoot()
     {
         GameObject GO = Instantiate(canonBall, canonSpawnPoint.position, canonSpawnPoint.rotation);

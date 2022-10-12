@@ -6,6 +6,7 @@ public class Enemy_Spawner : MonoBehaviour
     private float spawnPointX, spawnPointY, waitTime;
     private Transform player;
     private float increaseDifficulty;
+   
     void Start()
     {
         Invoke("SpawnEnemy", 1);

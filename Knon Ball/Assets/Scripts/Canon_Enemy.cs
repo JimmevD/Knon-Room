@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CanonEnemy : Enemy
+public class Canon_Enemy : Enemy
 {
     private Transform player;
     private Rigidbody2D rb;

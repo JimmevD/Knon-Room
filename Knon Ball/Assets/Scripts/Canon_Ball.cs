@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CanonBall : MonoBehaviour
+public class Canon_Ball : MonoBehaviour
 {
     private Rigidbody2D rb;
 
