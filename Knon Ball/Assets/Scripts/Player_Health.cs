@@ -15,9 +15,15 @@ public class Player_Health : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Wall")
         {
-            Destroy(collision.gameObject);
+            print("test");
+        }
+
+            if (collision.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<Enemy>().TakeDamage(1);
+            print("Gothit");
             health -= 1;
 
             if (health <= 0)

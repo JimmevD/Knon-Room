@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
-            Debug.Log("Die");
+            Destroy(this.gameObject);
         }
     }
 }
