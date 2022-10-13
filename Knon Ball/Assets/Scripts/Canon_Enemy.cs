@@ -13,7 +13,7 @@ public class Canon_Enemy : Enemy
     {
         player = GameObject.Find("Player").transform;
         rb = GetComponent<Rigidbody2D>();
-        Invoke("Shoot", 2);
+        Invoke("Shoot", Random.Range(0.5f, 2f));
     }
 
     void Update()
@@ -30,7 +30,7 @@ public class Canon_Enemy : Enemy
         rb.AddForce(shootPoint.up * speed, ForceMode2D.Impulse);
 
 
-        randomShootTime = Random.Range(5, 10);
+        randomShootTime = Random.Range(2, 6);
         Invoke("Shoot", randomShootTime);
     }
 }

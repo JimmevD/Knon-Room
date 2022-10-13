@@ -7,17 +7,17 @@ public class PowerUp_Speedboost : PowerUp
     {
         if (collision.gameObject.name == "Player")
         {
-            StartCoroutine(powerUpAction());
-            WaitforDuration();
+            StartCoroutine(Speedboost());
+            WaitTillEnd();
         }
     }
 
-    public override IEnumerator powerUpAction()
+    private IEnumerator Speedboost()
     {
         pm.movementSpeed *= 2;
-        pm.speedLimiter *= 2;
+        GameObject.Find("SpeedIcon").GetComponent<SpriteRenderer>().enabled = true;
         yield return new WaitForSeconds(duration);
         pm.movementSpeed /= 2;
-        pm.speedLimiter /= 2;
+        GameObject.Find("SpeedIcon").GetComponent<SpriteRenderer>().enabled = false;
     }
 }

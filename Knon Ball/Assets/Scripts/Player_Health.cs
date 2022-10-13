@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class Player_Health : MonoBehaviour
 {
-    private int health = 3;
+    public int health = 3;
+    private int maxhealth = 3;
     SpriteRenderer sp, spChild;
     [SerializeField] private Color[] healthColor;
    
@@ -34,6 +35,16 @@ public class Player_Health : MonoBehaviour
             sp.color = healthColor[health - 1];
             spChild.color = healthColor[health - 1];
 
+        }
+    }
+
+    public void AddHealth(int amoutHp)
+    {
+        if (health != maxhealth)
+        {
+            health = health + amoutHp;
+            sp.color = healthColor[health - 1];
+            spChild.color = healthColor[health - 1];
         }
     }
 }

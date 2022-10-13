@@ -39,7 +39,7 @@ public class Enemy_Spawner : MonoBehaviour
         waitTime = Random.Range(1 - increaseDifficulty, 2 - increaseDifficulty);
         Invoke("SpawnEnemy", waitTime);
         
-        if (increaseDifficulty !> 0.5f)
-        increaseDifficulty += 0.01f;
+        if (increaseDifficulty !> 0.7f)
+        increaseDifficulty += 0.015f;
     }
 }
