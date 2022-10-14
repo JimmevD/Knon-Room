@@ -4,6 +4,7 @@ public class Canon_Enemy : Enemy
 {
     private Transform player;
     private Rigidbody2D rb;
+    [SerializeField] private AudioSource shootSound;
 
     private float randomShootTime;
     [SerializeField] private Transform shootPoint;
@@ -28,7 +29,7 @@ public class Canon_Enemy : Enemy
         GameObject GO = Instantiate(enemyBullet, shootPoint.position, shootPoint.rotation);
         Rigidbody2D rb = GO.GetComponent<Rigidbody2D>();
         rb.AddForce(shootPoint.up * speed, ForceMode2D.Impulse);
-
+        shootSound.Play();
 
         randomShootTime = Random.Range(2, 6);
         Invoke("Shoot", randomShootTime);

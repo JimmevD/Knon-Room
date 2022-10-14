@@ -5,6 +5,7 @@ public class PowerUp : MonoBehaviour
     [HideInInspector] public Player_Movement pm;
     [HideInInspector] public Player_Health ph;
     [HideInInspector] public Player_Shooting ps;
+    public AudioSource pickUpSound;
     public float duration = 5;
 
     void Start()

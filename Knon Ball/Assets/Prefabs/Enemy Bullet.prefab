@@ -147,4 +147,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  dead: {fileID: 3579925918657251662, guid: 2c8ac93b59a16144ba59d06a1926e14a, type: 3}
+  score: 0
+  deadParticleSystem: {fileID: 3579925918657251662, guid: 2c8ac93b59a16144ba59d06a1926e14a, type: 3}

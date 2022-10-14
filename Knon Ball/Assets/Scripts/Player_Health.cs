@@ -5,6 +5,7 @@ public class Player_Health : MonoBehaviour
     public int health = 3;
     private int maxhealth = 3;
     SpriteRenderer sp, spChild;
+    [SerializeField] private AudioSource playerHit;
     [SerializeField] private Color[] healthColor;
    
     void Start()
@@ -50,7 +51,7 @@ public class Player_Health : MonoBehaviour
             sp.color = healthColor[health - 1];
             spChild.color = healthColor[health - 1];
         }
-
+        playerHit.Play();
         FindObjectOfType<ScreenShake>().AddShake(0.5f);
     }
 }

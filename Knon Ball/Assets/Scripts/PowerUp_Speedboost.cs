@@ -8,6 +8,7 @@ public class PowerUp_Speedboost : PowerUp
         if (collision.gameObject.name == "Player")
         {
             StartCoroutine(Speedboost());
+            pickUpSound.Play();
             WaitTillEnd();
         }
     }

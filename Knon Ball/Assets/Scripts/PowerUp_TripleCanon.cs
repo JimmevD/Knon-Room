@@ -8,6 +8,7 @@ public class PowerUp_TripleCanon : PowerUp
         if (collision.gameObject.name == "Player")
         {
             StartCoroutine(TripleCanon());
+            pickUpSound.Play();
             WaitTillEnd();
         }
     }

@@ -13,7 +13,7 @@ public class Player_Shooting : MonoBehaviour
     [SerializeField] private Transform[] canonAni;
 
     [SerializeField] private float speed = 20f;
-
+    [SerializeField] private AudioSource shootSound;
     private float cooldown, waitTime = 0.5f;
 
 
@@ -31,6 +31,7 @@ public class Player_Shooting : MonoBehaviour
                 {
                     TripleShoot();
                 }
+                shootSound.Play();
                 cooldown = Time.time + waitTime;
             }
         }      

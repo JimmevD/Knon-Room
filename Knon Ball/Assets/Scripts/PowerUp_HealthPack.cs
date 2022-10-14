@@ -7,6 +7,7 @@ public class PowerUp_HealthPack : PowerUp
         if (collision.gameObject.name == "Player")
         {
             ph.AddHealth(1);
+            pickUpSound.Play();
             WaitTillEnd();
         }
     }
