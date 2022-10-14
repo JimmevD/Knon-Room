@@ -34,7 +34,7 @@ public class Player_Shooting : MonoBehaviour
                 shootSound.Play();
                 cooldown = Time.time + waitTime;
             }
-        }      
+        }
     } 
     
     private void Shoot()

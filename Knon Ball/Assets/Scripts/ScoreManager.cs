@@ -4,11 +4,9 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     private int curScore, highscore;
-    private UIManager uiManager;
     [SerializeField] private TextMeshProUGUI scoreText, highScoreText, scoreText2, highScoreText2;
     void Start()
     {
-        uiManager = FindObjectOfType<UIManager>();
         highscore = PlayerPrefs.GetInt("highscore", highscore);
         highScoreText.text = "Highscore: " + highscore;
         highScoreText2.text = "Highscore: " + highscore;
