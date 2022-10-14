@@ -26,7 +26,7 @@ public class Enemy_Spawner : MonoBehaviour
             return;
         }
 
-        if (Random.Range(0, 100) < 20)
+        if (Random.Range(0, 100) < 20 && increaseDifficulty > 0.1f)
         {
             Instantiate(CanonEnemy, Spawnpoint, Quaternion.identity);
         }

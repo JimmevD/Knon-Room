@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Canon_Enemy : Enemy
 {
@@ -10,6 +11,9 @@ public class Canon_Enemy : Enemy
     [SerializeField] private Transform shootPoint;
     [SerializeField] GameObject enemyBullet;
     [SerializeField] private float speed;
+
+    [SerializeField] private GameObject canonBarrel;
+    [SerializeField] private Transform[] shootAni;
     void Start()
     {
         player = GameObject.Find("Player").transform;
@@ -29,9 +33,18 @@ public class Canon_Enemy : Enemy
         GameObject GO = Instantiate(enemyBullet, shootPoint.position, shootPoint.rotation);
         Rigidbody2D rb = GO.GetComponent<Rigidbody2D>();
         rb.AddForce(shootPoint.up * speed, ForceMode2D.Impulse);
+
+        StartCoroutine(ShootAni());
         shootSound.Play();
 
         randomShootTime = Random.Range(2, 6);
         Invoke("Shoot", randomShootTime);
+    }
+
+    private IEnumerator ShootAni()
+    {
+        canonBarrel.transform.position = shootAni[1].position;
+        yield return new WaitForSeconds(0.1f);
+        canonBarrel.transform.position = shootAni[0].position;
     }
 }

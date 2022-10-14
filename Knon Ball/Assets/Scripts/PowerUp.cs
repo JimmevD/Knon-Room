@@ -20,6 +20,6 @@ public class PowerUp : MonoBehaviour
         GetComponent<SpriteRenderer>().enabled = false;
         transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<CircleCollider2D>().enabled = false;
-        Destroy(gameObject, duration + 0.01f);
+        Destroy(gameObject, duration + 1f);
     }
 }

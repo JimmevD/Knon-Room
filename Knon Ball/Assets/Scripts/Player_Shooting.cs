@@ -58,7 +58,7 @@ public class Player_Shooting : MonoBehaviour
         StartCoroutine(ShootAni());
     }
 
-    public IEnumerator ShootAni()
+    private IEnumerator ShootAni()
     {
         canonBarrel.transform.position = canonAni[1].position;
         yield return new WaitForSeconds(0.1f);
