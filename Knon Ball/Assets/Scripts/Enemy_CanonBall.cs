@@ -8,5 +8,10 @@ public class Enemy_CanonBall : Enemy
         {
             Destroy(this.gameObject);
         }
+
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

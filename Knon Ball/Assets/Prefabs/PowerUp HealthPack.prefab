@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4296767295246874820}
   - component: {fileID: 2273147414346962196}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 7848183596373849812}
   - component: {fileID: 7848183596373849811}
   - component: {fileID: 5239785634252912281}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PowerUp HealthPack
   m_TagString: PowerUp
   m_Icon: {fileID: 0}

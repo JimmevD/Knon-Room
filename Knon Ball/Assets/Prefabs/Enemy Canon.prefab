@@ -133,6 +133,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  score: 2
+  dead: {fileID: 3579925918657251662, guid: 62265b9385db4844ba83325d2f8e2168, type: 3}
   shootPoint: {fileID: 7275590541688536841}
   enemyBullet: {fileID: 4564244640797776713, guid: d3a3627172346094181fe9443cb435ac, type: 3}
   speed: 10

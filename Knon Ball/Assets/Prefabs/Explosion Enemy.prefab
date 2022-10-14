@@ -137,4 +137,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  score: 1
+  dead: {fileID: 3579925918657251662, guid: 09d884e027978064e803ebf4121f6916, type: 3}
   speed: 3

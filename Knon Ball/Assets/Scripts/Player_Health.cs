@@ -22,19 +22,8 @@ public class Player_Health : MonoBehaviour
 
         if (collision.gameObject.tag == "Enemy")
         {
-            collision.gameObject.GetComponent<Enemy>().TakeDamage(1);
-            print("Gothit");
-            health -= 1;
-
-            if (health <= 0)
-            {
-                //Gameover();
-                Debug.Log("Dead");
-            }
-
-            sp.color = healthColor[health - 1];
-            spChild.color = healthColor[health - 1];
-
+            collision.gameObject.GetComponent<Enemy>().HittedPlayer();
+            ChangeHealth();
         }
     }
 
@@ -46,5 +35,20 @@ public class Player_Health : MonoBehaviour
             sp.color = healthColor[health - 1];
             spChild.color = healthColor[health - 1];
         }
+    }
+
+    private void ChangeHealth()
+    {
+        health -= 1;
+
+        if (health <= 0)
+        {
+            //Gameover();
+        }
+
+        sp.color = healthColor[health - 1];
+        spChild.color = healthColor[health - 1];
+
+        FindObjectOfType<ScreenShake>().AddShake(0.5f);
     }
 }

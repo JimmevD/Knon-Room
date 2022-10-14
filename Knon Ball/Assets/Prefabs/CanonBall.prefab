@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6446844246235247952}
   - component: {fileID: 6446844246235247955}
   - component: {fileID: -1153755770213811619}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CanonBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

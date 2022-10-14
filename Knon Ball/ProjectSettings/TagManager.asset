@@ -13,11 +13,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - CanonBall
   - Water
   - UI
-  - 
-  - 
+  - PowerUp
+  - Post Processing
   - 
   - 
   - 

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3720655113922202314}
   - component: {fileID: 5483823212271786930}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 7848183596373849812}
   - component: {fileID: 7848183596373849811}
   - component: {fileID: 3981724616208268434}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PowerUp Triple Canon
   m_TagString: PowerUp
   m_Icon: {fileID: 0}

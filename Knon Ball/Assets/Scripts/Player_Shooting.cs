@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Player_Shooting : MonoBehaviour
 {
@@ -7,6 +8,9 @@ public class Player_Shooting : MonoBehaviour
     
     public GameObject triplecanonGO;
     [HideInInspector] public bool triplecanon;
+
+    [SerializeField] private GameObject canonBarrel;
+    [SerializeField] private Transform[] canonAni;
 
     [SerializeField] private float speed = 20f;
 
@@ -37,6 +41,9 @@ public class Player_Shooting : MonoBehaviour
         GameObject GO = Instantiate(canonBall, canonSpawnPoint[0].position, canonSpawnPoint[0].rotation);
         Rigidbody2D rb = GO.GetComponent<Rigidbody2D>();
         rb.AddForce(canonSpawnPoint[0].up * speed, ForceMode2D.Impulse);
+
+        StartCoroutine(ShootAni());
+
     }
 
     public void TripleShoot()
@@ -47,5 +54,13 @@ public class Player_Shooting : MonoBehaviour
             Rigidbody2D rb = GO.GetComponent<Rigidbody2D>();
             rb.AddForce(canonSpawnPoint[i].up * speed, ForceMode2D.Impulse);
         }
+        StartCoroutine(ShootAni());
+    }
+
+    public IEnumerator ShootAni()
+    {
+        canonBarrel.transform.position = canonAni[1].position;
+        yield return new WaitForSeconds(0.1f);
+        canonBarrel.transform.position = canonAni[0].position;
     }
 }
