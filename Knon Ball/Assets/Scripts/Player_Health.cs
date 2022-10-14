@@ -43,11 +43,13 @@ public class Player_Health : MonoBehaviour
 
         if (health <= 0)
         {
-            //Gameover();
+            FindObjectOfType<UIManager>().GameOver();
         }
-
-        sp.color = healthColor[health - 1];
-        spChild.color = healthColor[health - 1];
+        else
+        {
+            sp.color = healthColor[health - 1];
+            spChild.color = healthColor[health - 1];
+        }
 
         FindObjectOfType<ScreenShake>().AddShake(0.5f);
     }

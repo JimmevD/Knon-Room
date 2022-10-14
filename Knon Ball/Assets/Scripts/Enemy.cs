@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
         {
             Instantiate(dead, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
-            FindObjectOfType<UIManager>().AddScore(score);
+            FindObjectOfType<ScoreManager>().AddScore(score);
         }
     }
 

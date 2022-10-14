@@ -1,12 +1,12 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreText;
-    private int curScore;
 
-    [SerializeField] private GameObject mainMenu, pauseMenu, howToPlay;
+    [SerializeField] private GameObject mainMenu, pauseMenu, howToPlay, gameOver;
     private bool backToMainMenu;
 
     private void Start()
@@ -16,17 +16,10 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !mainMenu.activeInHierarchy)
+        if (Input.GetKeyDown(KeyCode.Escape) && !mainMenu.activeInHierarchy && !gameOver.activeInHierarchy)
         {
             PauseAndResume();
         }
-    }
-
-    public void AddScore(int amount)
-    {
-        curScore += amount;
-
-        scoreText.text = "Score " + curScore.ToString();
     }
 
     public void Play()
@@ -81,5 +74,23 @@ public class UIManager : MonoBehaviour
             pauseMenu.SetActive(true);
             scoreText.gameObject.SetActive(true);
         }      
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    public void GameOver()
+    {
+        gameOver.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void PlayAgain()
+    {
+        SceneManager.LoadScene(0);
+        gameOver.SetActive(false);
+        mainMenu.SetActive(true);
     }
 }
