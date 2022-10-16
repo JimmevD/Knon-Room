@@ -44,10 +44,9 @@ public class Player_Shooting : MonoBehaviour
         rb.AddForce(canonSpawnPoint[0].up * speed, ForceMode2D.Impulse);
 
         StartCoroutine(ShootAni());
-
     }
 
-    public void TripleShoot()
+    private void TripleShoot()
     {
         for (int i = 0; i < canonSpawnPoint.Length; i++)
         {

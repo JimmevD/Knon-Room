@@ -9,7 +9,6 @@ public class Player_Movement : MonoBehaviour
     private Vector2 mousePos;
     private Camera cam;
 
-
     private float horizontal, vertical;
 
     private void Start()

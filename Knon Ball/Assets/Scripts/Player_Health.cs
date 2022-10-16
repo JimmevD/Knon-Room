@@ -16,11 +16,6 @@ public class Player_Health : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Wall")
-        {
-            print("test");
-        }
-
         if (collision.gameObject.tag == "Enemy")
         {
             collision.gameObject.GetComponent<Enemy>().HittedPlayer();

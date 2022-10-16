@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Enemy_Spawner : MonoBehaviour
 {
-    [SerializeField] GameObject explosionEnemy, CanonEnemy;
+    [SerializeField] GameObject explosionEnemy, CanonEnemy, TriangleEnemy;
     private float spawnPointX, spawnPointY, waitTime;
     private Transform player;
     private float increaseDifficulty;
@@ -20,13 +20,17 @@ public class Enemy_Spawner : MonoBehaviour
 
         Vector3 Spawnpoint = new Vector3(spawnPointX, spawnPointY, 0);
 
-        if (Vector3.Distance(player.position, Spawnpoint) < 2)
+        if (Vector3.Distance(player.position, Spawnpoint) < 4)
         {
             SpawnEnemy();
             return;
         }
 
-        if (Random.Range(0, 100) < 20 && increaseDifficulty > 0.1f)
+        if ((Random.Range(0, 100) < 10 && increaseDifficulty > 0.3f))
+        {
+            Instantiate(TriangleEnemy, Spawnpoint, Quaternion.identity);
+        }
+        else if (Random.Range(0, 100) < 20 && increaseDifficulty > 0.1f)
         {
             Instantiate(CanonEnemy, Spawnpoint, Quaternion.identity);
         }

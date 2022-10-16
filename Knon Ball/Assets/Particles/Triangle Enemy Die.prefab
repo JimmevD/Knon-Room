@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3579925918657251662}
   - component: {fileID: 2084067854882203880}
   m_Layer: 0
-  m_Name: Explosion Enemy Die
+  m_Name: Triangle Enemy Die
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -977,7 +977,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 7
+        scalar: 10
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -1042,7 +1042,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.9729767
+          value: 1
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -1050,8 +1050,8 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.28608507
-          value: 0.094594575
+          time: 1
+          value: 0
           inSlope: 1
           outSlope: 1
           tangentMode: 0
@@ -4819,7 +4819,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ed8a8b42c3d656b40af6a0024e0c7c2d, type: 2}
+  - {fileID: 2100000, guid: d89f513045e6e934caedc9d0749242b2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4844,7 +4844,7 @@ ParticleSystemRenderer:
   m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.01
+  m_MaxParticleSize: 0.02
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2

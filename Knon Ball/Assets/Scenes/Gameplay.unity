@@ -530,7 +530,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Controls:
 
-    
+
 
     W-A-S-D: Move
 
@@ -538,8 +538,8 @@ MonoBehaviour:
     Left click: Shoot
 
 
-    You
-    have 3 hp'
+    You have
+    3 hp'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1461,6 +1461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionEnemy: {fileID: 1751913306333056731, guid: cc9072d907708a441b89860c74fa3508, type: 3}
   CanonEnemy: {fileID: 7275590542194414310, guid: 05fbb759640125f4f86041093623054f, type: 3}
+  TriangleEnemy: {fileID: 124060217194831277, guid: a345c55a11d62dd41bd0f7a64ab04769, type: 3}
 --- !u!1 &315567891
 GameObject:
   m_ObjectHideFlags: 0
@@ -2691,12 +2692,12 @@ MonoBehaviour:
     Circle Enemy: Comes towards you (1 Point)
 
 
-    Canon
-    Enemy: Shoot blocks at you (2 Points)
+    Canon Enemy:
+    Shoot blocks at you (2 Points)
 
 
-    Enemy Bullet: Flies in a straight
-    line(0 Points)'
+    Enemy Bullet: Flies in a straight line(0
+    Points)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2879,8 +2880,7 @@ MonoBehaviour:
     speed for 5 seconds
 
 
-    Triple shots: Fire 3 shots at the same time for 5
-    seconds'
+    Triple shots: Fire 3 shots at the same time for 5 seconds'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4708,8 +4708,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317583645}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
-  m_LocalScale: {x: 18, y: 0.2, z: 1}
+  m_LocalPosition: {x: -0.316, y: 6.5317, z: 0}
+  m_LocalScale: {x: 28.685015, y: 3.26338, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 524020047}
@@ -5967,8 +5967,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558236995}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 10, z: 1}
+  m_LocalPosition: {x: -12.9546, y: 0, z: 0}
+  m_LocalScale: {x: 8.30924, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 524020047}
@@ -6876,8 +6876,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887671717}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 10, z: 1}
+  m_LocalPosition: {x: 11.66, y: 0, z: 0}
+  m_LocalScale: {x: 5.7200804, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 524020047}
@@ -7106,8 +7106,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1900645040}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -5, z: 0}
-  m_LocalScale: {x: 18, y: 0.2, z: 1}
+  m_LocalPosition: {x: -1.5015, y: -6.5987, z: 0}
+  m_LocalScale: {x: 29.461418, y: 3.3974533, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 524020047}

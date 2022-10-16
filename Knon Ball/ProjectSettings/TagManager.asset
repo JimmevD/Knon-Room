@@ -9,6 +9,7 @@ TagManager:
   - WallSide
   - PowerUp
   - HealthPack
+  - TriangleSpawnPoints
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - PowerUp
   - Post Processing
   - UI Post
-  - 
+  - Enemy
   - 
   - 
   - 

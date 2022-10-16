@@ -10,7 +10,7 @@ public class PowerUps_Spawner : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player").transform;
-        Invoke("SpawnPowerUp", 10);
+        Invoke("SpawnPowerUp", 20);
         Invoke("CheckHealthPack", 10);
     }
 

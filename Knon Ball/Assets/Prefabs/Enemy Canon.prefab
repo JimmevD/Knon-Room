@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9198030316311847752}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShootAnimation shoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3692950099010535790}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShootAnimation standard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7275590541688536841}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShootingPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 7275590542194414331}
   - component: {fileID: 7275590542194414330}
   - component: {fileID: 3333752873052073469}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy Canon
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -361,7 +361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7275590542269885029}
   - component: {fileID: 7275590542269885028}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
