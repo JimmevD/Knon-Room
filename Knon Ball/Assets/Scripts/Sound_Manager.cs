@@ -1,36 +1,45 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Audio;
 
 public class Sound_Manager : MonoBehaviour
 {
     public AudioSource enemyDeadSound;
     [SerializeField] private AudioSource backgroundMusic;
-    [SerializeField] private Slider volumeSlider;
+    [SerializeField] private AudioSource triangleExplosionSound;
+    [SerializeField] private GameObject sliders;
 
-    //[SerializeField] private AudioMixerGroup;
+    [SerializeField] private AudioMixerGroup musicMixer, soundEffectMixer;
 
     public void EnemyDeadSound()
     {
         enemyDeadSound.Play();
     }
 
-    public void ChangeVolume(bool showSlider)
+    public void TriangleExplosionSound()
     {
-        if (showSlider)
-        {
-            if (!volumeSlider.gameObject.activeInHierarchy)
-            {
-                volumeSlider.gameObject.SetActive(true);
-            }
-            else
-            {
-                volumeSlider.gameObject.SetActive(false);
-            }
-        }
+        triangleExplosionSound.Play();
+    }
 
-        if (!showSlider)
-            backgroundMusic.volume = volumeSlider.value;
+    public void ShowVolumeSliders()
+    {
+        if (!sliders.gameObject.activeInHierarchy)
+        {
+            sliders.gameObject.SetActive(true);
+        }
+        else
+        {
+            sliders.gameObject.SetActive(false);
+        }     
+    }
+
+    public void SetVolumeMusic(float slidervalue)
+    {
+        musicMixer.audioMixer.SetFloat("Music", Mathf.Log10(slidervalue) * 20);
+    }
+
+    public void SetVolumeSoundEffect(float slidervalue)
+    {
+        soundEffectMixer.audioMixer.SetFloat("Sound Effect", Mathf.Log10(slidervalue) * 20);
     }
 
 }

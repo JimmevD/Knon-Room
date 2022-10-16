@@ -6,7 +6,7 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreText;
 
-    [SerializeField] private GameObject mainMenu, pauseMenu, howToPlay, gameOver, soundIcon;
+    [SerializeField] private GameObject mainMenu, pauseMenu, howToPlay, gameOver, soundIcon, sliders;
     private bool backToMainMenu;
 
     private void Start()
@@ -26,6 +26,7 @@ public class UIManager : MonoBehaviour
     {
         scoreText.gameObject.SetActive(true);
         soundIcon.SetActive(false);
+        sliders.SetActive(false);
         mainMenu.SetActive(false);
         Time.timeScale = 1;
     }
@@ -42,6 +43,7 @@ public class UIManager : MonoBehaviour
         {
             pauseMenu.SetActive(false);
             soundIcon.SetActive(false);
+            sliders.SetActive(false);
             Time.timeScale = 1;
         }
     }
@@ -61,6 +63,7 @@ public class UIManager : MonoBehaviour
             backToMainMenu = false;
         }
         soundIcon.SetActive(false);
+        sliders.SetActive(false);
         scoreText.gameObject.SetActive(false);
     }
 

@@ -11,6 +11,7 @@ public class Triangle_Enemy : Enemy
     [SerializeField] private Transform[] spawnPoints;
 
     [SerializeField] private ParticleSystem ExplosionParticle;
+    [SerializeField] private AudioSource spawnTriangleSound;
     void Start()
     {
         player = GameObject.Find("Player").transform;
@@ -39,10 +40,13 @@ public class Triangle_Enemy : Enemy
     {
         Instantiate(littleTriangle, spawnPoints[Random.Range(0, spawnPoints.Length)].position, Quaternion.identity);
         Invoke("SpawnLittleTriangle", 2f);
+        spawnTriangleSound.Play();
     }
 
     private void Explode()
     {
+        FindObjectOfType<Sound_Manager>().TriangleExplosionSound();
+
         for (int i = 0; i < spawnPoints.Length; i++)
         {
             Instantiate(littleTriangle, spawnPoints[i].transform.position, Quaternion.identity);
