@@ -5,12 +5,19 @@ public class Canon_Ball : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sp;
     private int damage = 1;
+    private float colorChanger = 1;
+    [HideInInspector] public bool pierce;
 
     private void Start()
     {
         Destroy(gameObject, 2);
         rb = GetComponent<Rigidbody2D>();
         sp = GetComponent<SpriteRenderer>();
+
+        if (pierce)
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -18,7 +25,11 @@ public class Canon_Ball : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             collision.GetComponent<Enemy>().TakeDamage(damage);
-            Destroy(this.gameObject);
+            
+            if (!pierce)
+            {
+                Destroy(this.gameObject);
+            }
         }
 
         if (collision.gameObject.name == "Wall Y")
@@ -26,7 +37,7 @@ public class Canon_Ball : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, -rb.velocity.y);
             BounceBall();
         }
-        else
+        else if (collision.gameObject.name == "Wall X")
         {
             rb.velocity = new Vector2(-rb.velocity.x, rb.velocity.y);
             BounceBall();
@@ -35,10 +46,8 @@ public class Canon_Ball : MonoBehaviour
 
     private void BounceBall()
     {
-        if (damage == 1)
-        {
-            sp.color = Color.yellow;
-            damage = 2;
-        }
+        colorChanger -= 0.2f;
+        sp.color = new Color(1, 1, colorChanger);
+        damage++;
     }
 }

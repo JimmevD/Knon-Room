@@ -16,6 +16,8 @@ public class Player_Shooting : MonoBehaviour
     [SerializeField] private AudioSource shootSound;
     private float cooldown, waitTime = 0.5f;
 
+    [HideInInspector] public bool pierce;
+
 
     void Update()
     {
@@ -40,6 +42,8 @@ public class Player_Shooting : MonoBehaviour
     private void Shoot()
     {
         GameObject GO = Instantiate(canonBall, canonSpawnPoint[0].position, canonSpawnPoint[0].rotation);
+        if (pierce)
+        GO.GetComponent<Canon_Ball>().pierce = true;
         Rigidbody2D rb = GO.GetComponent<Rigidbody2D>();
         rb.AddForce(canonSpawnPoint[0].up * speed, ForceMode2D.Impulse);
 
