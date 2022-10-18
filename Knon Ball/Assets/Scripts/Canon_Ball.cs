@@ -42,6 +42,12 @@ public class Canon_Ball : MonoBehaviour
             rb.velocity = new Vector2(-rb.velocity.x, rb.velocity.y);
             BounceBall();
         }
+
+        if (collision.gameObject.name == "Player")
+        {
+            rb.velocity = new Vector2(-rb.velocity.x, -rb.velocity.y);
+            BounceBall();
+        }
     }
 
     private void BounceBall()
