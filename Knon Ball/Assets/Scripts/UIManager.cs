@@ -9,6 +9,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject mainMenu, pauseMenu, howToPlay, gameOver, soundIcon, sliders;
     private bool backToMainMenu;
 
+    [SerializeField] private GameObject[] howToPlayMenus;
+    private int currentHowToPlayMenu;
+
     private void Start()
     {
         Time.timeScale = 0;
@@ -100,5 +103,36 @@ public class UIManager : MonoBehaviour
         gameOver.SetActive(false);
         soundIcon.SetActive(true);
         mainMenu.SetActive(true);
+    }
+
+
+    public void ScrollHowToPlayMenus(bool isRight)
+    {
+        howToPlayMenus[currentHowToPlayMenu].SetActive(false);
+
+        if (isRight)
+        {
+            if (currentHowToPlayMenu != howToPlayMenus.Length -1)
+            {          
+                currentHowToPlayMenu++;
+            }
+            else
+            {
+                currentHowToPlayMenu = 0;
+            }
+        }
+        else
+        {
+            if (currentHowToPlayMenu != 0)
+            {
+                currentHowToPlayMenu--;
+            }
+            else
+            {
+                currentHowToPlayMenu = howToPlayMenus.Length - 1;
+            }          
+        }
+
+        howToPlayMenus[currentHowToPlayMenu].SetActive(true);
     }
 }

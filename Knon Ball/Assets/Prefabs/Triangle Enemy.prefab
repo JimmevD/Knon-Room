@@ -258,11 +258,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 033105f06671b4c4b8b863ef211a4fd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
-  score: 3
+  health: 4
+  score: 5
   deadParticleSystem: {fileID: 3579925918657251662, guid: befc575af9175404889237d8580596b3, type: 3}
   speed: 2
-  growSpeed: 0.3
+  growSpeed: 0.2
   littleTriangle: {fileID: 4258601062673759112, guid: 4e0bdad40e7c69e469795f4476512b6f, type: 3}
   spawnPoints:
   - {fileID: 124060216946657469}
